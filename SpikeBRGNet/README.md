@@ -39,7 +39,7 @@ The DSEC-Semantic dataset can be downloaded here[https://dsec.ifi.uzh.ch/dsec-se
 
 ├── DSEC_Semantic                 
 │   ├── train               
-│   │   ├── zurich_city_00_a
+│   │   ├── zurich_city_00_a  
 │   │   │   ├── semantic  
 │   │   │   │   ├── left
 │   │   │   │   │   ├── 11classes
