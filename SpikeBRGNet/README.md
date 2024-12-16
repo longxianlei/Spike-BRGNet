@@ -18,11 +18,11 @@ This is the official repository for our recent work: Spike-BRGNet ([PDF](https:/
 The finetuned models on DDD17 and DSEC-Semantic are available for direct application in road scene parsing.
 
 | Model (DDD17) | Val (% mIOU) |
-|:-:|:-:|:-:|:-:|
+|:-:|:-:|
 | Spike-BRGNet | [54.72](/home/ubuntu/code/SpikeBRGNet/output/DDD17_events/pidnet_small_DDD17/best.pt) 
 
 | Model (DSEC) | Val (% mIOU) |
-|:-:|:-:|:-:|:-:|
+|:-:|:-:|
 | Spike-BRGNet | [54.95](/home/ubuntu/code/SpikeBRGNet/output/DSEC_events/pidnet_small_DSEC/best.pt)
 
 ## Prerequisites
