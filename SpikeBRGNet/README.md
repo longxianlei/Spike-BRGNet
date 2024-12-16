@@ -17,13 +17,13 @@ This is the official repository for our recent work: Spike-BRGNet ([PDF](https:/
 ## Models
 The finetuned models on DDD17 and DSEC-Semantic are available for direct application in road scene parsing.
 
-| Model (DDD17) | Val (% mIOU) | Test (% mIOU)| FPS |
+| Model (DDD17) | Val (% mIOU) |
 |:-:|:-:|:-:|:-:|
 | Spike-BRGNet | [54.72](/home/ubuntu/code/SpikeBRGNet/output/DDD17_events/pidnet_small_DDD17/best.pt) 
 
-| Model (DSEC) | Val (% mIOU) | Test (% mIOU)| FPS |
+| Model (DSEC) | Val (% mIOU) |
 |:-:|:-:|:-:|:-:|
-| Spike-BRGNet |-| [54.95](/home/ubuntu/code/SpikeBRGNet/output/DSEC_events/pidnet_small_DSEC/best.pt)
+| Spike-BRGNet | [54.95](/home/ubuntu/code/SpikeBRGNet/output/DSEC_events/pidnet_small_DSEC/best.pt)
 
 ## Prerequisites
 The inference speed is tested on single RTX 3090 using the method introduced by [SwiftNet](https://arxiv.org/pdf/1903.08469.pdf). No third-party acceleration lib is used, so you can try [TensorRT](https://github.com/NVIDIA/TensorRT) or other approaches for faster speed.
