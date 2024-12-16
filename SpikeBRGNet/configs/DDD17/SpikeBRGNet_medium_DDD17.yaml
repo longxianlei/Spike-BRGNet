@@ -1,0 +1,62 @@
+CUDNN:
+  BENCHMARK: true
+  DETERMINISTIC: false
+  ENABLED: true
+GPU_DEVICE: 1
+OUTPUT_DIR: 'output'
+LOG_DIR: 'log'
+WORKERS: 8
+PRINT_FREQ: 10
+
+DATASET:
+  DATASET: DDD17_events
+  # ROOT: data/ #??
+  NUM_CLASSES: 6  # 6 for DDD17, 11 for DSEC
+  #event
+  DATASET_PATH: /home/ubuntu/share_container/Datasets/zhuxx/DDD17_events
+  split_train: 'train'
+  shape: [200, 346]
+  nr_events_data: 1
+  delta_t_per_data: 50
+  nr_events_window: 32000
+  data_augmentation_train: True
+  event_representation: 'voxel_grid'
+  nr_temporal_bins: 5
+  require_paired_data_train: False
+  require_paired_data_val: False
+  separate_pol: False
+  normalize_event: False
+  fixed_duration: False
+
+MODEL:
+  NAME: SpikeBRGNet_medium
+  NUM_OUTPUTS: 2
+  PRETRAINED: "pretrained_models/imagenet/SpikeBRGNet_M_ImageNet.pth.tar"
+
+LOSS:
+  USE_OHEM: true
+  OHEMTHRES: 0.9
+  OHEMKEEP: 131072
+  BALANCE_WEIGHTS: [0.4, 1.0]
+  SB_WEIGHTS: 1.0
+
+TRAIN:
+  BATCH_SIZE_PER_GPU: 16
+  SHUFFLE: true
+  BEGIN_EPOCH: 0
+  END_EPOCH: 150 #20
+  RESUME: false
+  OPTIMIZER: sgd
+  LR: 0.01
+  WD: 0.0005
+  MOMENTUM: 0.9
+  NESTEROV: false
+  MULTI_SCALE: true
+  IGNORE_LABEL: 255
+  SCALE_FACTOR: 16
+
+TEST:                                                                                                                                                                                           
+  BATCH_SIZE_PER_GPU: 16
+  MULTI_SCALE: false
+  MODEL_FILE: ''
+  OUTPUT_INDEX: 1
