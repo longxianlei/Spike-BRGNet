@@ -41,24 +41,24 @@ The DSEC-Semantic dataset can be downloaded here[https://dsec.ifi.uzh.ch/dsec-se
 │   ├── train               
 │   │   ├── zurich_city_00_a  
 │   │   │   ├── semantic  
-│   │   │   │   ├── left
-│   │   │   │   │   ├── 11classes
-│   │   │   │   │   │   └──data
-│   │   │   │   │   │       ├── 000000.png
-│   │   │   │   │   │       └── ...
-│   │   │   │   │   └── 19classes
-│   │   │   │   │       └──data
-│   │   │   │   │           ├── 000000.png
-│   │   │   │   │           └── ...
-│   │   │   │   └── timestamps.txt
-│   │   │   └── events  
-│   │   │       └── left
-│   │   │           ├── events.h5
-│   │   │           └── rectify_map.h5
-│   │   └── ...
-│   └── test
-│       ├── zurich_city_13_a
-│       │   └── ...
+│   │   │   │   ├── left  
+│   │   │   │   │   ├── 11classes  
+│   │   │   │   │   │   └──data  
+│   │   │   │   │   │       ├── 000000.png  
+│   │   │   │   │   │       └── ...  
+│   │   │   │   │   └── 19classes  
+│   │   │   │   │       └──data  
+│   │   │   │   │           ├── 000000.png  
+│   │   │   │   │           └── ...  
+│   │   │   │   └── timestamps.txt  
+│   │   │   └── events    
+│   │   │       └── left  
+│   │   │           ├── events.h5  
+│   │   │           └── rectify_map.h5  
+│   │   └── ...  
+│   └── test  
+│       ├── zurich_city_13_a  
+│       │   └── ...  
 │       └── ... 
 
 * Remenber to replace the dataset path in the yaml with your ture dataset path
