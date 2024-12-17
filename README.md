@@ -3,7 +3,7 @@ This is the source code of our IEEE TCSVT paper, titled "Spike-BRGNet: Efficient
 
 # Spike-BRGNet: Efficient and Accurate Event-based Semantic Segmentation with Boundary Region-Guided Spiking Neural Networks
 
-This is the official repository for our recent work: Spike-BRGNet ([PDF](https://ieeexplore.ieee.org/document/10750266)）
+This is the official repository for our recent work: Spike-BRGNet ([PDF link](https://ieeexplore.ieee.org/document/10750266)）
 
 
 * **Event only**:  The spike-based computing mechanism of Spike-BRGNet allows it to deal with complex scenarios efficiently and accurately without image frames.
