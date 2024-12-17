@@ -1,5 +1,5 @@
 # SpikeBRGNet
-This is the source code of our IEEE TCSVT paper, titled "[Spike-BRGNet: Efficient and Accurate Event-based Semantic Segmentation with Boundary Region-Guided Spiking Neural Networks](https://ieeexplore.ieee.org/document/10750266)"
+This is the source code of our **IEEE TCSVT** paper, titled "[Spike-BRGNet: Efficient and Accurate Event-based Semantic Segmentation with Boundary Region-Guided Spiking Neural Networks](https://ieeexplore.ieee.org/document/10750266)"
 
 # Spike-BRGNet: Efficient and Accurate Event-based Semantic Segmentation with Boundary Region-Guided Spiking Neural Networks
 
@@ -12,7 +12,7 @@ This is the official repository for our recent work: Spike-BRGNet ([PDF link](ht
 
 ## Updates
 
-   - This paper was accepted by TCSVT 2024, new version and associated materials will be available soon! (Nov/8/2024)
+   - This paper was accepted by IEEE TCSVT 2024, a new version and associated materials will be available soon! (Nov/8/2024)
    - Our paper was submitted to IEEE Explore for public access. (Nov/11/2024)
    - The training and testing codes and trained models for Spike-BRGNet are available here. (Dec/09/2024)
 
@@ -70,18 +70,18 @@ The DSEC-Semantic dataset can be downloaded here[https://dsec.ifi.uzh.ch/dsec-se
 │       │   └── ...  
 │       └── ... 
 
-* Remenber to replace the dataset path in the yaml with your ture dataset path
+* Remember to replace the dataset path in the YAML with your true dataset path
 
 
 ### 1. Training
 
-* For example, train the SpikeBRGNet-s on DDD17 with batch size of 32 on 1 GPUs:
+* For example, train the SpikeBRGNet-s on DDD17 with a batch size of 32 on 1 GPU:
 
 ````bash
 python tools/train.py --cfg configs/DDD17/SpikeBRGNet_small_DDD17.yaml TRAIN.BATCH_SIZE_PER_GPU 32
 ````
 
-* Or train the SpikeBRGNet-s on DSEC with batch size of 12 on 1 GPUs:
+* Or train the SpikeBRGNet-s on DSEC with a batch size of 12 on 1 GPUs:
 
 ````bash
 python tools/train.py --cfg configs/DSEC/SpikeBRGNet_small_DSEC.yaml TRAIN.BATCH_SIZE_PER_GPU 12
@@ -90,7 +90,7 @@ python tools/train.py --cfg configs/DSEC/SpikeBRGNet_small_DSEC.yaml TRAIN.BATCH
 ### 2. Evaluation
 
 * Put the finetuned models for DDD17 and DSEC-Semantic into `output/DDD17_event/SpikeBRGNet_x_DDD17/` and `output/DSEC_events/SpikeBRGNet_x_DSEC/` dirs, respectively.
-* For example, evaluate the SpikeBRGNet-S on DDD17 val set:
+* For example, evaluate the SpikeBRGNet-S on the DDD17 val set:
 
 ````bash
 python tools/eval.py --cfg configs/DDD17/SpikeBRGNet_small_DDD17.yaml
