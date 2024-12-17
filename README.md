@@ -1,5 +1,5 @@
 # SpikeBRGNet
-This is the source code of our **IEEE TCSVT** paper, titled "[Spike-BRGNet: Efficient and Accurate Event-based Semantic Segmentation with Boundary Region-Guided Spiking Neural Networks](https://ieeexplore.ieee.org/document/10750266)"
+This is the source code of our **IEEE TCSVT** paper, titled "[Spike-BRGNet: Efficient and Accurate Event-based Semantic Segmentation with Boundary Region-Guided Spiking Neural Networks](https://ieeexplore.ieee.org/document/10750266)".
 
 # Spike-BRGNet: Efficient and Accurate Event-based Semantic Segmentation with Boundary Region-Guided Spiking Neural Networks
 
