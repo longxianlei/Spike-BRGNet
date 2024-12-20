@@ -22,13 +22,13 @@ This is the official repository for our recent work: Spike-BRGNet ([PDF link](ht
 
 The finetuned models on DDD17 and DSEC-Semantic are available for direct application in road scene parsing.
 
-| Model (DDD17) |                         Val (% mIOU)                         |
-| :-----------: | :----------------------------------------------------------: |
-| Spike-BRGNet  | [54.72](/home/ubuntu/code/SpikeBRGNet/output/DDD17_events/pidnet_small_DDD17/best.pt) |
+| Model (DDD17) | Val (% mIOU) | Energy_Cost (mJ) | Params (M) |
+|:-:|:-:|:-:|:-:|
+| Spike-BRGNet | [54.72](https://drive.google.com/file/d/1hMSVBppTo4vqCbvjY03n8xAQMsbCfQGo/view?usp=drive_link) | 7.77 | 7.68 | 
 
-| Model (DSEC) |                         Val (% mIOU)                         |
-| :----------: | :----------------------------------------------------------: |
-| Spike-BRGNet | [54.95](/home/ubuntu/code/SpikeBRGNet/output/DSEC_events/pidnet_small_DSEC/best.pt) |
+| Model (DSEC-Semantic) | Val (% mIOU) | Energy_Cost (mJ) | Params (M) |
+|:-:|:-:|:-:|:-:|
+| Spike-BRGNet | [54.95](https://drive.google.com/file/d/1PoWq3rxwNXsKK3f888KWSr9wzgk6ouea/view?usp=drive_link) | 30.18 | 7.68 |
 
 ## Prerequisites
 
@@ -74,27 +74,28 @@ The DSEC-Semantic dataset can be downloaded here[https://dsec.ifi.uzh.ch/dsec-se
 
 
 ### 1. Training
-
-* For example, train the SpikeBRGNet-s on DDD17 with a batch size of 32 on 1 GPU:
-
+* Download the ImageNet pretrained models and put them into pretrained_models/imagenet/ dir.
+* For example, train the SpikeBRGNet-s on DDD17 with batch size of 32 on 1 GPUs:
 ````bash
-python tools/train.py --cfg configs/DDD17/SpikeBRGNet_small_DDD17.yaml TRAIN.BATCH_SIZE_PER_GPU 32
+python tools/train.py --cfg configs/DDD17/SpikeBRGNet_DDD17.yaml
 ````
-
-* Or train the SpikeBRGNet-s on DSEC with a batch size of 12 on 1 GPUs:
-
+* Or train the SpikeBRGNet-s on DSEC with batch size of 12 on 1 GPUs:
 ````bash
-python tools/train.py --cfg configs/DSEC/SpikeBRGNet_small_DSEC.yaml TRAIN.BATCH_SIZE_PER_GPU 12
+python tools/train.py --cfg configs/DSEC/SpikeBRGNet_DSEC.yaml
 ````
 
 ### 2. Evaluation
 
-* Put the finetuned models for DDD17 and DSEC-Semantic into `output/DDD17_event/SpikeBRGNet_x_DDD17/` and `output/DSEC_events/SpikeBRGNet_x_DSEC/` dirs, respectively.
-* For example, evaluate the SpikeBRGNet-S on the DDD17 val set:
-
+* Download the finetuned models for DDD17 and DSEC-Semantic and put them into `pretrained_models/DDD17/` and `pretrained_models/DSEC/` dirs, respectively.
+* For example, evaluate the SpikeBRGNet on DDD17 val set:
 ````bash
-python tools/eval.py --cfg configs/DDD17/SpikeBRGNet_small_DDD17.yaml
+python tools/eval.py --cfg configs/DDD17/SpikeBRGNet_DDD17.yaml TEST.MODEL_FILE pretrained_models/DDD17/SpikeBRGNet_DDD17_Test.pt
 ````
+* Or, evalute the SpikeBRGNet on DSEC-Semantic val set:
+````bash
+python tools/eval.py --cfg configs/DSEC/SpikeBRGNet_DSEC.yaml TEST.MODEL_FILE pretrained_models/DSEC/SpikeBRGNet_DSEC_Test.pt
+````
+
 
 
 ## Citation
